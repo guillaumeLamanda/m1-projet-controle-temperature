@@ -43,8 +43,51 @@ Le deuxième aspect de l’organisation répond à la question du comment : c’
 Nous utiliserons l’IDE Eclipse pour la phase de codage ainsi que JUNIT pour effectuer des cas de test.
 Nous joindrons aux différents cas de test des captures d’écran pour la réussite/l’échec des tests.
 Auteur : Serge MEL
-Relecteur : ???????????S
+Relecteur : ???????????
 
 #### Réalisation : 
-A faire par Zak
+
+public class APISuivi {
+
+	public double lireTemperature(int annee, int mois, int jour, int heure,String unite) {
+		double Temperature=new SuiviChauffage().LireTemperature(annee, mois, jour, heure);
+		return conversion(Temperature,unite);
+	}
+	public double conversion(double temp,String unite) {
+		double conv=temp;
+		if(unite=="Celius")
+			conv+=273.15;
+		else if (unite=="Fahrenheit")
+			conv= conv * 9/5 - 459.67;
+		return conv;
+	}
+	
+	public void AjoutNouvelleMesure(int annee, int mois, int jour, int heure,double uneTemperature) {
+	
+	}
+}
+*****************************************************************************************************************
+public class Configuration {
+
+	private boolean userTemp;
+	public Configuration() {
+		super();
+	}
+	public Configuration(boolean userTemp) {
+		super();
+		this.userTemp = userTemp;
+	}
+	public String type() {
+		if (getUserTemp()== true) return "Celsius";
+		else return "Fahrenheit";	
+	}
+	public boolean getUserTemp() {
+		return userTemp;
+	}
+	public void setUserTemp(boolean userTemp) {
+		this.userTemp = userTemp;
+	}
+}
+
+Autheur : Zakaria BELGHAZAL
 
