@@ -19,7 +19,7 @@ On ajoute la classe Configuration :
 - Un attribut « userTemp » correspondant à l’unité de température en booléen. Le faux correspond au Celcius et le vrai correspond Fahrenheit (+ getter/setter),
 Classe APISuivi : 
 - Une méthode « LireTemperature », qui permet de récupérer la température en via la méthode existante « lireTempérature » de la classe SuiviChauffage puis la convertie via la méthode « conversion »,
-- Une méthode AjoutNouvelleMesure
+- Une méthode AjoutNouvelleMesure qui reprend les paramètre de la classe SuiviTemperature.
 - Une méthode « conversion » qui permet de convertir la valeur depuis le Kelvin à l’unité de destination choisi par l’utilisateur.  
 
 Autheur : Guillaume Lamanda  
