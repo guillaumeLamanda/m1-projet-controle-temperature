@@ -27,23 +27,34 @@ Relecteur : Serge Mel
 
 #### Plan de test : 
 
-Message pour serge : Les tests doivent être défini de la manière suivante : 
+Plan de test :
 
-- On essaie de récupérer la température sur la classe APISuivi via la méthode LireTempérature. 
-- etc ... 
+Test N°1 : 
 
+ce test a pour but de laisser le choix à l’utilisateur de choisir dans la phase l’installation de choisir l’unité de température qui sera soit en Celsius ou Fahrenheit. Pour connaitre les états de la classe Configuration, une condition doit permettre de vérifier la valeur de l’attribut « userTemp».
 
+Si cette valeur de l’attribut correspond au degré Celsius,
+  Alors    résultat vaut « false»,
+Sinon Si cette valeur de l’attribut correspond au Fahrenheit
+  Alors   résultat vaut « vrai». 
+  
+T1:C=newConfiguration() ;C.Set(userTemperature=Celsius);AssertTrue(C.getuserTemperature==false).
+T2:C=newConfiguration() ;C.Set(userTemperature=Fahrenheit);AssertTrue(C.getuserTemperature==true).
 
-A ce titre, le plan de test décrit les éléments clés ci-dessous : 
-•	Organisation du test : nécessite une équipe et un environnement. En effet l’organisation du test recouvre d’une part l’aspect humain c’est-à-dire « une ou deux personne(s) » pour constituer de : 
-	L’équipe de validation :  Quentin lechat, Guillaume Lamanda, Serge MEL, ZaKARIA Belghza. 
- Rôle : procéder à la validation de la classe Configuration. D’abord l’interaction du développement se fera par échange de communication écrite et orale, de plus on utilisera comme outil de gestion de version : GitHub pour rendre le travail plus collaboratif. Ensuite nous solliciterons M Jean Philipe BABAU pour son expertise afin de répondre nos questions liées à la qualité du travail produit.  Enfin nous proposerons une première version du travail en présentiel au client M BABAU pour répondre au besoin de celui-ci et une dernière version sera produite pour fournir le livrable final. 
-Le deuxième aspect de l’organisation répond à la question du comment : c’est-à-dire le côté 
-	Technique, autrement dit il s’agit de l’implémentation.
-Nous utiliserons l’IDE Eclipse pour la phase de codage ainsi que JUNIT pour effectuer des cas de test.
-Nous joindrons aux différents cas de test des captures d’écran pour la réussite/l’échec des tests.
+Test N°2 :
+
+Le test consiste à récupérer la température via la classe APISuivi par appel de la méthode LireTemperature qui appelle la méthode LireTemperature de la classe SuiviChauffage. 
+
+De même l’ajout de nouvelle mesure sur la classe APISuivi est faite par la méthode AjoutNouvelleMesure via la méthode AjoutNouvelleMesure de la classe SuiviChauffage.
+
+T2-1 :ApiSuivi=new APISuivi() ; ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; AssertTrue(ApiSuivi.LireTempérature(temperatureFahrenheit)) ;
+
+T2-2 :ApiSuivi=new APISuivi() ; ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; AssertTrue(ApiSuivi.LireTempérature(temperatureCelsius)) ;
+
+T2-3 :ApiSuivi=new APISuivi() ; ApiSuivi. AjoutNouvelleMesure (NouvelleMesure) ; ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; AssertTrue(ApiSuivi.LireTempérature(temperatureCelsius)) ;
+
 Auteur : Serge MEL
-Relecteur : ???????????
+Relecteur : Guillaume LAMANDA
 
 #### Réalisation : 
 
