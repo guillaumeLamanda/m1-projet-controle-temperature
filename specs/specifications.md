@@ -124,8 +124,19 @@ Si cette valeur de l’attribut correspond au degré Celsius,
 Sinon Si cette valeur de l’attribut correspond au Fahrenheit
   Alors   résultat vaut « vrai». 
   
-T1:C=newConfiguration() ;C.Set(userTemperature=Celsius);AssertTrue(C.getuserTemperature==false).
-T2:C=newConfiguration() ;C.Set(userTemperature=Fahrenheit);AssertTrue(C.getuserTemperature==true).
+T1:
+``` 
+C=newConfiguration() ;
+C.Set(userTemperature=Celsius);
+AssertTrue(C.getuserTemperature==false);
+``` 
+
+T2:
+``` 
+C=newConfiguration() ;
+C.Set(userTemperature=Fahrenheit);
+AssertTrue(C.getuserTemperature==true);
+```
 
 Test N°2 :
 
@@ -133,9 +144,19 @@ Le test consiste à récupérer la température via la classe APISuivi par appel
 
 De même l’ajout de nouvelle mesure sur la classe APISuivi est faite par la méthode AjoutNouvelleMesure via la méthode AjoutNouvelleMesure de la classe SuiviChauffage.
 
-T2-1 :ApiSuivi=new APISuivi() ; ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; AssertTrue(ApiSuivi.LireTempérature(temperatureFahrenheit)) ;
+T2-1 :
+```
+ApiSuivi=new APISuivi() ; 
+ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; 
+AssertTrue(ApiSuivi.LireTempérature(temperatureFahrenheit)) ;
+```
 
-T2-2 :ApiSuivi=new APISuivi() ; ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; AssertTrue(ApiSuivi.LireTempérature(temperatureCelsius)) ;
+T2-2 :
+```
+ApiSuivi=new APISuivi() ; 
+ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; 
+AssertTrue(ApiSuivi.LireTempérature(temperatureCelsius)) ;
+```
 
 T2-3 :
 ```
