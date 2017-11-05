@@ -95,19 +95,38 @@ Autheur : Zakaria BELGHAZAL
 
 
 ***************************************************************************************************************** 
-Plan de test :
-Test N°1 : ce test a pour but de laisser le choix à l’utilisateur de choisir dans la phase l’installation de choisir l’unité de température qui sera soit en Celsius ou Fahrenheit. Pour connaitre les états de la classe Configuration, une condition doit permettre de vérifier la valeur de l’attribut « userTemp».
-T1: créer un objet de la classe Configuration, choisir Celsius comme valeur de l’attribut userTemp via des , puis comparer le type de la valeur de l’attribut  au booléen false.
-T2:  créer un objet de la classe Configuration, choisir Fahrenheit comme valeur de l’attribut userTemp via des , puis comparer le type de la valeur de l’attribut  au booléen true.
+##### Plan de test :
+Test N°1 : 
+
+ce test a pour but de laisser le choix à l’utilisateur de choisir dans la phase l’installation de choisir l’unité de température qui sera soit en Celsius ou Fahrenheit. Pour connaitre les états de la classe Configuration, une condition doit permettre de vérifier la valeur de l’attribut « userTemp».
+
+T1: 
+
+créer un objet de la classe Configuration, choisir Celsius comme valeur de l’attribut userTemp via des , puis comparer le type de la valeur de l’attribut  au booléen false.
+
+T2:  
+créer un objet de la classe Configuration, choisir Fahrenheit comme valeur de l’attribut userTemp via des , puis comparer le type de la valeur de l’attribut  au booléen true.
+
 Test N°2 :
+
 Le test consiste à récupérer la température via la classe APISuivi par appel de la méthode LireTemperature qui appelle la méthode LireTemperature de la classe SuiviChauffage. 
 De même l’ajout de nouvelle mesure sur la classe APISuivi est faite par la méthode AjoutNouvelleMesure via la méthode AjoutNouvelleMesure de la classe SuiviChauffage.
-T2-1 : Créer un nouvel objet de la classe APISuivi, cette objet appelle sa méthode LireTemperature , puis les températures lues en Kelvin  seront  convertis en Fahrenheit par la méthode Conversion de la classe APISuivi. Vérifier le résultat de la conversion qui est en l’unité Fahrenheit.
-T2-2 : Créer un nouvel objet de la classe APISuivi, qui appelle sa méthode LireTemperature , puis les températures lues en Kelvin  seront  convertis en Celsius par la méthode Conversion de la classe APISuivi. Vérifier le résultat de la conversion qui est en l’unité Celsius.
-T2-3 :  
+
+T2-1 :
+
+Créer un nouvel objet de la classe APISuivi, cette objet appelle sa méthode LireTemperature , puis les températures lues en Kelvin  seront  convertis en Fahrenheit par la méthode Conversion de la classe APISuivi. Vérifier le résultat de la conversion qui est en l’unité Fahrenheit.
+
+T2-2 : 
+Créer un nouvel objet de la classe APISuivi, qui appelle sa méthode LireTemperature , puis les températures lues en Kelvin  seront  convertis en Celsius par la méthode Conversion de la classe APISuivi. Vérifier le résultat de la conversion qui est en l’unité Celsius.
+
+T2-3 :
+
 Créer un nouvel objet de la classe APISuivi, qui appelle la méthode AjoutNouvelleMesure , puis faire l’appel de la méthode AjoutNouvelleMesure de la classe  SuiviChauffage. Ensuite il faudra faire  des méthodes LireTemperature  des classes  APISuivi & SuiviChauffage, puis les températures lues en Kelvin  seront  convertis en Celsius par la méthode Conversion de la classe APISuivi et enfin vérifier le résultat de la conversion qui est en l’unité Celsius.
+
 T2-4 :
+
 Créer un nouvel objet de la classe APISuivi, qui appelle la méthode AjoutNouvelleMesure , puis faire l’appel de la méthode AjoutNouvelleMesure de la classe  SuiviChauffage. Ensuite il faudra faire des méthodes LireTemperature  des classes  APISuivi & SuiviChauffage, puis les températures lues en Kelvin  seront  convertis en Fahrenheit par la méthode Conversion de la classe APISuivi et enfin vérifier le résultat de la conversion qui est en l’unité Celsius.
+
 Auteur : Serge MEL
 Relecteur : Guillaume Lamanda
 
