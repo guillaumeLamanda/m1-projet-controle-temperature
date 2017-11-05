@@ -101,8 +101,7 @@ public class Configuration {
 }
 
 Autheur : Zakaria BELGHAZAL
-
-
+Relecteur : Guillaume LAMANDA
 
 
 ***************************************************************************************************************** 
