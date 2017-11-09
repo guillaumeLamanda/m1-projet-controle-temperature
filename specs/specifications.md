@@ -200,7 +200,7 @@ Une minute stocke une seule valeur.
 Il n'es pas possible de modifier une valeur précédemment ajouté.
 
 Autheur : Guillaume LAMANDA  
-Relecteur : Quentin Le Chat
+Relecteur : Quentin LE CHAT
 
 #### Spécification technique
 
