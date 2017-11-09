@@ -217,6 +217,9 @@ Relecteur : Quentin LE CHAT
 ### E 3.4 : l'unité de température dépend du pays d'installation
 
 ### E 3.5 : On veut récuperer les températures moyennes par heure, par jour et par mois.
+
+#### Spécification fonctionnelle
+
 --Spécification fonctionnelle températues moyennes par heure :
   Il s'agit de récuperer les différentes valeurs mesurées par minute durant 60 minutes pour calculer la moyenne de température en 1 heure.
   
@@ -231,3 +234,5 @@ Relecteur : Quentin LE CHAT
 Autheur   :Serge MEL
 
 Relecteur :Guillaume LAMANDA
+
+#### Spécification technique
