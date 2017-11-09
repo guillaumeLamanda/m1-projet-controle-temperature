@@ -186,8 +186,17 @@ Relecteur : Guillaume LAMANDA
 
 ### E 3.2 : les donnees de suivi doivent etre serialisees
 
-A l’arrêt de système, les états des données seront sauvegardés.
+#### Spécification fonctionnelle
+A l’arrêt de système, les états des données seront sauvegardés.  
 Au démarrage de système on restaure l’état des données.
+
+#### Spécification technique
+On modifie la classe APISuivi pour qu'elle implémente la classe Serializable. Par héritage, la classe obtiendra un attribut privé serialVersionUID.  
+On modifie le programme principale pour qu'au démarrage, il restaure l'objet APISuivi depuis le ficher "APISuivi.ser". Si le fichier n'existe pas, on creer une nouvelle instance de la classe APISuivi.  
+A la fermeture du programme, le l'objet est écrit dans le fichier "APISuivi.ser".  
+
+Autheur : Guillaume LAMANDA	 
+Relecteur : Quentin LE CHAT
 
 ### E 3.3 : On doit pouvoir faire un suivi à la minute
 
