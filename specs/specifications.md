@@ -28,8 +28,9 @@ Relecteur : Serge Mel
 #### Plan de test :
 Test N°1 : 
 
-Ce test va permettre la bonne configuration de l'unité de température après la configuration du boitier. Pour cela on vérifie l'attribut booleen "userTemp". 
+Intention de test : Ce test va permettre la bonne configuration de l'unité de température après la configuration du boitier. Pour cela on vérifie l'attribut booleen "userTemp". 
 
+Procédure :
 T1.1: 
 - créer un objet de la classe Configuration, 
 - choisir Celsius comme valeur de l’attribut userTemp, 
