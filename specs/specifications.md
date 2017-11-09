@@ -166,3 +166,11 @@ AssertTrue(ApiSuivi.LireTempérature(temperatureCelsius)) ;
 ```
 Auteur : Serge MEL
 Relecteur : Guillaume LAMANDA
+
+### E 3.2 : l'unité de température dépend du pays d'installation
+
+### E 3.3 : l'unité de température dépend du pays d'installation
+
+### E 3.4 : l'unité de température dépend du pays d'installation
+
+### E 3.5 : l'unité de température dépend du pays d'installation
