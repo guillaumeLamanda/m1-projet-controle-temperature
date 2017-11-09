@@ -41,15 +41,15 @@ T1.1:
 #### Scénario nominal de Configuration:
 - C=newConfiguration();C.Set(userTemperature=Celsius);AssertTrue(C.getuserTemperature==false);
 
-Test        Valeur Attendu  Valeur Observé   Validation  
+Test             Valeur Attendu           Valeur Observé           Validation  
 
-Celsius     False           False            ok
+Celsius           False                     False                       ok
 
-Celsius     False           False            ok
+Celsius           False                     False                       ok
 
-Fahrenheit  True            True             ok
+Fahrenheit        True                      True                        ok
 
-Celsius     False           False            ok
+Celsius           False                     False                        ok
 
 Cas alternatif:Par défaut le champ userTemp affiche Celsius ce qui fait qu'on aura pas de de Scénario d'erreur.
 
