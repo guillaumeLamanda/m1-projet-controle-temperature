@@ -25,55 +25,6 @@ Classe APISuivi :
 Autheur : Guillaume Lamanda  
 Relecteur : Serge Mel
 
-#### Réalisation : 
-
-public class APISuivi {
-
-	public double lireTemperature(int annee, int mois, int jour, int heure,String unite) {
-		double Temperature=new SuiviChauffage().LireTemperature(annee, mois, jour, heure);
-		return conversion(Temperature,unite);
-	}
-	public double conversion(double temp,String unite) {
-		double conv=temp;
-		if(unite=="Celius")
-			conv+=273.15;
-		else if (unite=="Fahrenheit")
-			conv= conv * 9/5 - 459.67;
-		return conv;
-	}
-	
-	public void AjoutNouvelleMesure(int annee, int mois, int jour, int heure,double uneTemperature) {
-	
-	}
-}
-*****************************************************************************************************************
-public class Configuration {
-
-	private boolean userTemp;
-	public Configuration() {
-		super();
-	}
-	public Configuration(boolean userTemp) {
-		super();
-		this.userTemp = userTemp;
-	}
-	public String type() {
-		if (getUserTemp()== true) return "Celsius";
-		else return "Fahrenheit";	
-	}
-	public boolean getUserTemp() {
-		return userTemp;
-	}
-	public void setUserTemp(boolean userTemp) {
-		this.userTemp = userTemp;
-	}
-}
-
-Autheur : Zakaria BELGHAZAL
-Relecteur : Guillaume LAMANDA
-
-
-***************************************************************************************************************** 
 ##### Plan de test :
 Test N°1 : 
 
@@ -110,6 +61,60 @@ Auteur : Serge MEL
 Relecteur : Guillaume LAMANDA
 
 --------------------------
+
+#### Réalisation : 
+
+```
+public class APISuivi {
+
+	public double lireTemperature(int annee, int mois, int jour, int heure,String unite) {
+		double Temperature=new SuiviChauffage().LireTemperature(annee, mois, jour, heure);
+		return conversion(Temperature,unite);
+	}
+	public double conversion(double temp,String unite) {
+		double conv=temp;
+		if(unite=="Celius")
+			conv+=273.15;
+		else if (unite=="Fahrenheit")
+			conv= conv * 9/5 - 459.67;
+		return conv;
+	}
+	
+	public void AjoutNouvelleMesure(int annee, int mois, int jour, int heure,double uneTemperature) {
+	
+	}
+}
+```
+*****************************************************************************************************************
+```
+public class Configuration {
+
+	private boolean userTemp;
+	public Configuration() {
+		super();
+	}
+	public Configuration(boolean userTemp) {
+		super();
+		this.userTemp = userTemp;
+	}
+	public String type() {
+		if (getUserTemp()== true) return "Celsius";
+		else return "Fahrenheit";	
+	}
+	public boolean getUserTemp() {
+		return userTemp;
+	}
+	public void setUserTemp(boolean userTemp) {
+		this.userTemp = userTemp;
+	}
+}
+```
+
+Autheur : Zakaria BELGHAZAL
+Relecteur : Guillaume LAMANDA
+
+
+***************************************************************************************************************** 
 
 On fait quoi de ca : 
 
@@ -169,7 +174,8 @@ Relecteur : Guillaume LAMANDA
 
 ### E 3.2 : l'unité de température dépend du pays d'installation
 
-### E 3.3 : l'unité de température dépend du pays d'installation
+### E 3.3 : On doit pouvoir faire un suivi à la minute
+
 
 ### E 3.4 : l'unité de température dépend du pays d'installation
 
