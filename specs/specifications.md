@@ -36,10 +36,47 @@ T1.1:
 - choisir Celsius comme valeur de l’attribut userTemp, 
 - puis comparer le type de la valeur de l’attribut au booléen false.
 
+- On génère également des setters et des getters puis on passe aux cas de test suivants.
+
+#### Scénario nominal de Configuration:
+- C=newConfiguration();C.Set(userTemperature=Celsius);AssertTrue(C.getuserTemperature==false);
+
+Test        Valeur Attendu  Valeur Observé   Validation  
+
+Celsius     False           False            ok
+
+Celsius     False           False            ok
+
+Fahrenheit  True            True             ok
+
+Celsius     False           False            ok
+
+Cas alternatif:Par défaut le champ userTemp affiche Celsius ce qui fait qu'on aura pas de de Scénario d'erreur.
+
+
+
 T1.2:  
 - créer un objet de la classe Configuration, 
 - choisir Fahrenheit comme valeur de l’attribut userTemp, 
 - puis comparer le type de la valeur de l’attribut au booléen true.
+
+#### Scénario nominal de Configuration:
+- C=newConfiguration();C.Set(userTemperature=Fahrenheit);AssertTrue(C.getuserTemperature==True);
+
+Test        Valeur Attendu  Valeur Observé   Validation  
+
+Fahrenheit  True            True             ok
+
+Celsius     False           False            ok
+
+Fahrenheit  True            True             ok
+
+Fahrenheit  True            True             ok
+
+Fahrenheit  True            True             ok
+
+Cas alternatif:Par défaut le champ userTemp affiche Celsius ce qui fait qu'on aura pas de de Scénario d'erreur.
+
 
 Test N°2 :
 
