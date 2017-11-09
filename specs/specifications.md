@@ -186,9 +186,8 @@ Relecteur : Guillaume LAMANDA
 
 ### E 3.2 : les donnees de suivi doivent etre serialisees
 
-A l’arrêt de système, les états des données seront sauvegardés. 
-Au démarrage de système on restaure l’état des données. 
-
+A l’arrêt de système, les états des données seront sauvegardés.
+Au démarrage de système on restaure l’état des données.
 
 ### E 3.3 : On doit pouvoir faire un suivi à la minute
 
