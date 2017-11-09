@@ -66,7 +66,7 @@ T3.2 :
 
 - Créer un nouvel objet de la classe APISuivi, 
 - Appeler la méthode AjoutNouvelleMesure avec des valeurs impossibles (ex: Int mois=13), 
-- La valeur retournée doit être "true".
+- La valeur retournée doit être "false".
 
 Auteur : Serge MEL
 Relecteur : Guillaume LAMANDA
