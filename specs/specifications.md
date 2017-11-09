@@ -216,4 +216,13 @@ Relecteur : Quentin LE CHAT
 
 ### E 3.4 : l'unité de température dépend du pays d'installation
 
-### E 3.5 : l'unité de température dépend du pays d'installation
+### E 3.5 : On veut récuperer les températures moyennes par heure, par jour et par mois.
+--Spécification fonctionnelle températues moyennes par heure :
+  Il s'agit de récuperer les différentes valeurs mesurées par minute durant 60 minutes pour calculer la moyenne de température en 1 heure.
+--Spécification fonctionnelle températues moyennes par jour  :
+  Récupérer les différentes valeurs de températures mesurées chaque heure pendant 24 heures et faire la moyenne de mesures.
+--Spécification fonctionnelle températues moyennes par mois  :
+  Extraire les différentes valeurs de températures mesusées de chaque jour sur une période 30 jours et faire la moyenne.
+  
+Autheur   :Serge MEL
+Relecteur :Guillaume LAMANDA
