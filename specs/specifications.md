@@ -25,37 +25,48 @@ Classe APISuivi :
 Autheur : Guillaume Lamanda  
 Relecteur : Serge Mel
 
-##### Plan de test :
+#### Plan de test :
 Test N°1 : 
 
-ce test a pour but de laisser le choix à l’utilisateur de choisir dans la phase l’installation de choisir l’unité de température qui sera soit en Celsius ou Fahrenheit. Pour connaitre les états de la classe Configuration, une condition doit permettre de vérifier la valeur de l’attribut « userTemp».
+Ce test va permettre la bonne configuration de l'unité de température après la configuration du boitier. Pour cela on vérifie l'attribut booleen "userTemp". 
 
-T1: 
+T1.1: 
+- créer un objet de la classe Configuration, 
+- choisir Celsius comme valeur de l’attribut userTemp, 
+- puis comparer le type de la valeur de l’attribut au booléen false.
 
-créer un objet de la classe Configuration, choisir Celsius comme valeur de l’attribut userTemp via des , puis comparer le type de la valeur de l’attribut  au booléen false.
-
-T2:  
-créer un objet de la classe Configuration, choisir Fahrenheit comme valeur de l’attribut userTemp via des , puis comparer le type de la valeur de l’attribut  au booléen true.
+T1.2:  
+- créer un objet de la classe Configuration, 
+- choisir Fahrenheit comme valeur de l’attribut userTemp, 
+- puis comparer le type de la valeur de l’attribut au booléen true.
 
 Test N°2 :
 
-Le test consiste à récupérer la température via la classe APISuivi par appel de la méthode LireTemperature qui appelle la méthode LireTemperature de la classe SuiviChauffage. 
-De même l’ajout de nouvelle mesure sur la classe APISuivi est faite par la méthode AjoutNouvelleMesure via la méthode AjoutNouvelleMesure de la classe SuiviChauffage.
+Le test consiste à récupérer la température via la classe APISuivi par appel de la méthode LireTemperature. La classe APISuivi aura préalablement été peuplée.
 
-T2-1 :
+T2.1 :
 
-Créer un nouvel objet de la classe APISuivi, cette objet appelle sa méthode LireTemperature , puis les températures lues en Kelvin  seront  convertis en Fahrenheit par la méthode Conversion de la classe APISuivi. Vérifier le résultat de la conversion qui est en l’unité Fahrenheit.
+- Créer un nouvel objet de la classe APISuivi,
+- Peupler cet objet par la méthode AjoutNouvelleTemperature
+- Lire une température par la méthode LireTemperature, 
+- La valeur retournée doit correspondre à la valeur précédemment ajoutée,
+- L'unité de la température doit correspondre à l'unité choisi par l'utilisateur
 
-T2-2 : 
-Créer un nouvel objet de la classe APISuivi, qui appelle sa méthode LireTemperature , puis les températures lues en Kelvin  seront  convertis en Celsius par la méthode Conversion de la classe APISuivi. Vérifier le résultat de la conversion qui est en l’unité Celsius.
+Test N°3 :
 
-T2-3 :
+Le test consiste à ajouter une nouvelle mesure via la classe APISuivi par appel à la méthode "AjoutNouvelleMesure". 
 
-Créer un nouvel objet de la classe APISuivi, qui appelle la méthode AjoutNouvelleMesure , puis faire l’appel de la méthode AjoutNouvelleMesure de la classe  SuiviChauffage. Ensuite il faudra faire  des méthodes LireTemperature  des classes  APISuivi & SuiviChauffage, puis les températures lues en Kelvin  seront  convertis en Celsius par la méthode Conversion de la classe APISuivi et enfin vérifier le résultat de la conversion qui est en l’unité Celsius.
+T3.1 :
 
-T2-4 :
+- Créer un nouvel objet de la classe APISuivi, 
+- Appeler la méthode AjoutNouvelleMesure avec des valeurs possibles, 
+- La valeur retournée doit être "true".
 
-Créer un nouvel objet de la classe APISuivi, qui appelle la méthode AjoutNouvelleMesure , puis faire l’appel de la méthode AjoutNouvelleMesure de la classe  SuiviChauffage. Ensuite il faudra faire des méthodes LireTemperature  des classes  APISuivi & SuiviChauffage, puis les températures lues en Kelvin  seront  convertis en Fahrenheit par la méthode Conversion de la classe APISuivi et enfin vérifier le résultat de la conversion qui est en l’unité Celsius.
+T3.2 :
+
+- Créer un nouvel objet de la classe APISuivi, 
+- Appeler la méthode AjoutNouvelleMesure avec des valeurs impossibles (ex: Int mois=13), 
+- La valeur retournée doit être "true".
 
 Auteur : Serge MEL
 Relecteur : Guillaume LAMANDA
