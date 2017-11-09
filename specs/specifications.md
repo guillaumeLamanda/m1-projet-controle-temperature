@@ -10,7 +10,7 @@ L'unité d'affichage est choisie à l'installation, c'est degré Celsius (°C) F
 On peut modifier l'unité d'affichage de Celsius <-> Fahrenheit.  
 A l'installation, le système demande à choisir le pays d'installation dans une liste déroulante des pays. Tous les pays sont en degré Celsius (°C) sauf aux Etats-Unis, au Bélize et aux Îles caïman  Fahrenheit (°F).  
 
-Auteur : Quentin lechat
+Auteur : Quentin lechat  
 Relecteur : Guillaume Lamanda
 
 #### Spécification technique :
@@ -22,7 +22,7 @@ Classe APISuivi :
 - Une méthode AjoutNouvelleMesure qui reprend les paramètre de la classe SuiviTemperature.
 - Une méthode « conversion » qui permet de convertir la valeur depuis le Kelvin à l’unité de destination choisi par l’utilisateur.  
 
-Autheur : Guillaume Lamanda  
+Autheur : Guillaume Lamanda    
 Relecteur : Serge Mel
 
 #### Plan de test :
@@ -69,7 +69,7 @@ T3.2 :
 - Appeler la méthode AjoutNouvelleMesure avec des valeurs impossibles (ex: Int mois=13), 
 - La valeur retournée doit être "false".
 
-Auteur : Serge MEL
+Auteur : Serge MEL  
 Relecteur : Guillaume LAMANDA
 
 --------------------------
@@ -122,7 +122,7 @@ public class Configuration {
 }
 ```
 
-Autheur : Zakaria BELGHAZAL
+Autheur : Zakaria BELGHAZAL  
 Relecteur : Guillaume LAMANDA
 
 
@@ -187,6 +187,19 @@ Relecteur : Guillaume LAMANDA
 ### E 3.2 : l'unité de température dépend du pays d'installation
 
 ### E 3.3 : On doit pouvoir faire un suivi à la minute
+
+#### Spécification fonctionnelle
+Une heure contient 60 minutes.  
+La température stockée est en Kelvin.  
+On peut lire une mesure de température.  
+On peut ajouter une nouvelle mesure pour une minute donnée.  
+Une minute stocke une seule valeur.  
+Il n'es pas possible de modifier une valeur précédemment ajouté.
+
+Autheur : Guillaume LAMANDA  
+Relecteur : Quentin Le Chat
+
+#### Spécification technique
 
 
 ### E 3.4 : l'unité de température dépend du pays d'installation
