@@ -43,13 +43,13 @@ T1.1:
 
 Test  ----------------- Valeur Attendu ------------------ Valeur Observé ----------------- Validation  
 
-Celsius ---------------    False--------------------------------- False ------------------------    ok
+Celsius ---------------    False--------------------------------- False ---------------------------   ok
 
-Celsius ---------------    False       ------------------      False     ------------------   ok
+Celsius ---------------    False--------------------------------- False ---------------------------   ok
 
-Fahrenheit --------------  True        ------------------      True      ------------------   ok
+Fahrenheit --------------  True---------------------------------  True  ---------------------------   ok
 
-Celsius ---------------    False       -----------------       False     -----------------    ok
+Celsius ---------------    False--------------------------------- False ---------------------------   ok
 
 Cas alternatif:Par défaut le champ userTemp affiche Celsius ce qui fait qu'on aura pas de de Scénario d'erreur.
 
@@ -65,15 +65,15 @@ T1.2:
 
 Test        Valeur Attendu  Valeur Observé   Validation  
 
-Fahrenheit  True            True             ok
+Test  ----------------- Valeur Attendu ------------------ Valeur Observé ----------------- Validation  
 
-Celsius     False           False            ok
+Fahrenheit --------------  True---------------------------------  True  ---------------------------   ok
 
-Fahrenheit  True            True             ok
+Celsius ---------------    False--------------------------------- False ---------------------------   ok
 
-Fahrenheit  True            True             ok
+Fahrenheit --------------  True---------------------------------  True  ---------------------------   ok
 
-Fahrenheit  True            True             ok
+Fahrenheit --------------  True---------------------------------  True  ---------------------------   ok
 
 Cas alternatif:Par défaut le champ userTemp affiche Celsius ce qui fait qu'on aura pas de de Scénario d'erreur.
 
