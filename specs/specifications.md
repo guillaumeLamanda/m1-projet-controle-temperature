@@ -24,6 +24,7 @@ Sérialisation des données :
 Les valeurs sont sérialisés dans un fichier au format CSV.  
 - Entête : 
 	- `annee ; mois ; jour ; heure ; minute ; temperature`
+
 Les données sont mises à jour toutes les heures dans le fichier.  
 Les données sont écrites dans l'ordre chronologique.  
 Une méthode d'export sera disponible en cas de besoin de l'utilisateur.  
