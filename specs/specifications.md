@@ -26,7 +26,7 @@ Autheur : Guillaume Lamanda
 Relecteur : Serge Mel
 
 #### Plan de test :
-<span style="color: red">A REVOIR/COMPLETER PAR SERGE</span>
+
 Test N°1 : 
 
 Intention de test : Ce test va permettre la bonne configuration de l'unité de température après la configuration du boitier. Pour cela on vérifie l'attribut booleen "userTemp". 
@@ -389,9 +389,8 @@ Autheur : Quentin LECHAT
 Relecteur : Serge MEL
 
 #### Spécification technique
-<span style="color: red">A REFAIRE PAR SERGE</span>
-- On crée une classe MigrationDonnees avec une méthode migrationDonnees et prend en paramètre un double « heureMigration ».la classe possède un attribut « heure ».
-
+On ajoute une classe MigrationDonnees :
+- migrationDonnees qui prend en paramètre un double et qui va enregistrer la température
 Autheur   : Serge MEL
 Relecteur : Quentin LECHAT
 
