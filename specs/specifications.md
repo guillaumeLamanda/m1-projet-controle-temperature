@@ -76,7 +76,7 @@ T1.1:
 - Réccupérer la température utilisateur
 	- Elle doit être égale à True.
 	- `C.getUserTemp()==True`
-- Le programme affiche la page d'acceuil.
+
 
 Test  | Valeur Attendu | Valeur Observé | Validation  
 ------|----------------|----------------|-----------
@@ -92,6 +92,7 @@ Fahrenheit |  True|    |
 #### Scénario nominal de Configuration:
 T1.2:  
 - Initialiser la classe configuration
+	- `C=newConfiguration(UserTemp);`
 - Définir la température de l'utilisateur en Fahrenheit
 	- `C.setUserTemp(True);`
 - Réccupérer la température utilisateur
@@ -132,29 +133,20 @@ T1.2:
 - Réccupérer la température utilisateur
 	- Elle doit être égale à True.
 	- `C.getUserTemp()==True`
-- Le programme affiche la page d'acceuil.
-
-Test  | Valeur Attendu | Valeur Observé | Validation  
-------|----------------|----------------|-----------
-Fahrenheit |  True|    | 
-Fahrenheit |  True|    | 
-Celsius |    False |  |  
-Celsius |    False |  |  
-Fahrenheit |  True|    | 
-Fahrenheit |  True|    | 
-Celsius |    False |  |  
-Fahrenheit |  True|    | 
-
-
-#### Scénario nominal de Configuration:
 
 
 Test  | Valeur Attendu | Valeur Observé | Validation  
 ------|----------------|----------------|-----------
-Fahrenheit | 		   True |      				|  
-Celsius |    			False |  						|  
-Fahrenheit |  			True|   				  |  
-Fahrenheit |    		True |  					| 
+Fahrenheit |  True|    | 
+Fahrenheit |  True|    | 
+Celsius |    False |  |  
+Celsius |    False |  |  
+Fahrenheit |  True|    | 
+Fahrenheit |  True|    | 
+Celsius |    False |  |  
+Fahrenheit |  True|    | 
+
+
 
 Test N°2 :
 
