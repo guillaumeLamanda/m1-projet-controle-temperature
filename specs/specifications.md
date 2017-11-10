@@ -250,17 +250,23 @@ Relecteur : Quentin LECHAT
 
 #### Spécification technique
 On modifie la classe APISuivi pour qu'elle implémente la classe Serializable. Par héritage, la classe obtiendra un attribut privé serialVersionUID.
+
 On ajoute une classe SuiviMinutes :
 - un attribut "temperatureMesuree" de type double qui stock la valeur de température de la minute
 - une méthode AjoutNouvelleMesure qui prend en paramètre un double et qui va enregistrer la température
 - une méthode LireTemperature qui renvoit la température enregistrée de type Double
 
 On ajoute le paramètre entier "minute" pour les méthodes AjoutNouvelleMesure et LireTemperature des classes suivantes :
+- SuiviHoraire
 - SuiviJournalier
 - SuiviMensuel 
 - SuiviAnnuel
 - SuiviChauffage
 - APISuivi
+
+On modifie la classe SuiviHoraire pour prendre en compte les minutes :
+- ajout d'un paramètre liste "lesMinutes"
+- modification du constructeur qui créé 60 objets SuviMinutes et les ajoute dans la liste
 
 Autheur : Quentin LECHAT 
 Relecteur : 
