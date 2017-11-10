@@ -35,48 +35,43 @@ T1.1:
 - créer un objet de la classe Configuration, 
 - choisir Celsius comme valeur de l’attribut userTemp, 
 - puis comparer le type de la valeur de l’attribut au booléen false.
-
 - On génère également des setters et des getters puis on passe aux cas de test suivants.
 
 #### Scénario nominal de Configuration:
-- C=newConfiguration();C.Set(userTemperature=Celsius);AssertTrue(C.getuserTemperature==false);
 
-Test  ----------------- Valeur Attendu ------------------ Valeur Observé ----------------- Validation  
+```
+C=newConfiguration();
+C.Set(userTemperature=false);
+AssertTrue(C.getuserTemperature==false);
+```
 
-Celsius ---------------    False--------------------------------- False ---------------------------   ok
-
-Celsius ---------------    False--------------------------------- False ---------------------------   ok
-
-Fahrenheit --------------  True---------------------------------  True  ---------------------------   ok
-
-Celsius ---------------    False--------------------------------- False ---------------------------   ok
-
-Cas alternatif:Par défaut le champ userTemp affiche Celsius ce qui fait qu'on aura pas de de Scénario d'erreur.
-
-
+Test  | Valeur Attendu | Valeur Observé | Validation  
+------|----------------|----------------|-----------
+Celsius |    False |  |  
+Celsius |    False |  |  
+Fahrenheit |  True|    |  
+Celsius |    False |  |  
 
 T1.2:  
-- créer un objet de la classe Configuration, 
-- choisir Fahrenheit comme valeur de l’attribut userTemp, 
+- créer un objet de la classe Configuration (... paramètres), 
+- choisir Fahrenheit comme valeur de l’attribut userTemp (boolean a ? ), 
 - puis comparer le type de la valeur de l’attribut au booléen true.
 
 #### Scénario nominal de Configuration:
-- C=newConfiguration();C.Set(userTemperature=Fahrenheit);AssertTrue(C.getuserTemperature==True);
 
-Test        Valeur Attendu  Valeur Observé   Validation  
+```
+C=newConfiguration();
+C.Set(userTemperature=true);
+AssertTrue(C.getuserTemperature==True);
+``` 
 
-Test  ----------------- Valeur Attendu ------------------ Valeur Observé ----------------- Validation  
 
-Fahrenheit --------------  True---------------------------------  True  ---------------------------   ok
-
-Celsius ---------------    False--------------------------------- False ---------------------------   ok
-
-Fahrenheit --------------  True---------------------------------  True  ---------------------------   ok
-
-Fahrenheit --------------  True---------------------------------  True  ---------------------------   ok
-
-Cas alternatif:Par défaut le champ userTemp affiche Celsius ce qui fait qu'on aura pas de de Scénario d'erreur.
-
+Test  | Valeur Attendu | Valeur Observé | Validation  
+------|----------------|----------------|-----------
+Fahrenheit | 		   True |      				|  
+Celsius |    			False |  						|  
+Fahrenheit |  			True|   				  |  
+Fahrenheit |    		True |  					| 
 
 Test N°2 :
 
