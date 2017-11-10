@@ -16,26 +16,26 @@ Les fichiers sources sont disponible dans le dossier src.
   - [x] réalisation
   - [ ] validation
 - [ ] E3.2 Les données de suivi doivent être sérialisés 
-  - [ ] spec fonctionnelle
-  - [ ] spec technique
-  - [ ] plan de test 
+  - [x] spec fonctionnelle
+  - [x] spec technique
+  - [x] plan de test 
   - [ ] réalisation
   - [ ] validation
 - [ ] E3.3 On doit pouvoir faire un suivi à la minute
-  - [ ] spec fonctionnelle
-  - [ ] spec technique
-  - [ ] plan de test 
+  - [x] spec fonctionnelle
+  - [x] spec technique
+  - [x] plan de test 
   - [ ] réalisation
   - [ ] validation
 - [ ] E3.4 On doit pouvoir faire migrer des données enregistrés par heure, dans des données enregistrés par minute
-  - [ ] spec fonctionnelle
-  - [ ] spec technique
-  - [ ] plan de test 
+  - [x] spec fonctionnelle
+  - [x] spec technique
+  - [x] plan de test 
   - [ ] réalisation
   - [ ] validation
 - [ ] E3.5 On veut récupérer les températures moyennes par heure, par jour et par mois.
-  - [ ] spec fonctionnelle
-  - [ ] spec technique
+  - [x] spec fonctionnelle
+  - [x] spec technique
   - [ ] plan de test 
   - [ ] réalisation
   - [ ] validation
