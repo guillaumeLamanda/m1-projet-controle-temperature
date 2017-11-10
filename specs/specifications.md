@@ -232,6 +232,10 @@ public class Configuration {
 Autheur : Zakaria BELGHAZAL  
 Relecteur : Guillaume LAMANDA
 
+#### Diagramme de séquence
+
+![Diagramme de séquence](./E31_DiagSequence_Config_Conversion_Quentin_Lechat.png)
+
 ### E 3.2 : les donnees de suivi doivent etre serialisees
 
 #### Spécification fonctionnelle
