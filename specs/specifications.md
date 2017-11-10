@@ -259,9 +259,17 @@ Auteur 2 : Guillaume LAMANDA
 Relecteur 2 : Serge MEL
 
 #### Spécification technique
+Sérialisation de l'état de l'objet :  
 On modifie la classe APISuivi pour qu'elle implémente la classe Serializable. Par héritage, la classe obtiendra un attribut privé serialVersionUID.  
 On modifie le programme principale pour qu'au démarrage, il restaure l'objet APISuivi depuis le ficher "APISuivi.ser". Si le fichier n'existe pas, on creer une nouvelle instance de la classe APISuivi.  
 A la fermeture du programme, le l'objet est écrit dans le fichier "APISuivi.ser".  
+
+Sérialisation des données :  
+Les données sont écrites dans un fichier `data.csv`.  
+On ajoute un attribut `lastFlush` de type Date à la classe APISuivi. Il correspond à la dernière écriture dans le fichier.  
+Une méthode writeData est ajouté à la classe APISuivi. Elle permet d'écrire les données qui n'ont pas encore été écrites dans le fichier. Elle vérifie pour chaque donnée à écrire si elle est bien différente de `null`.  
+A chaque <b>ajout</b> de nouvelle mesure, on vérifie si le temps depuis la dernière écriture est supérieur à 1h. Si c'est le cas, on appelle la méthode `writeData`.  
+
 
 Auteur : Guillaume LAMANDA	 
 Relecteur : Quentin LECHAT
