@@ -32,43 +32,121 @@ Test N°1 :
 Intention de test : Ce test va permettre la bonne configuration de l'unité de température après la configuration du boitier. Pour cela on vérifie l'attribut booleen "userTemp". 
 
 Procédure :
+
 T1.1: 
-- Allumer le boîtier pour la configuration
-	- créer un objet de la classe Configuration;
-	- On génère également des setters et des getters puis on passe aux cas de test suivants;
-	- choisir Celsius comme valeur de l’attribut userTemp;
-	- puis comparer le type de la valeur de l’attribut au booléen false;
-- Le résultat attendu est correct.	
-- Le programme affiche la page d'acceuil.
-
-
 #### Scénario nominal de Configuration:
-
-```
-C=newConfiguration();
-C.Set(userTemperature=false);
-AssertTrue(C.getuserTemperature==false);
-```
+- Initialiser la classe configuration
+- Définir la température de l'utilisateur en Celcius
+	- `C.setUserTemp(false);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à faux.
+	- `C.getUserTemp()==false`
+- Définir la température de l'utilisateur en Celcius
+	- `C.setUserTemp(false);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à faux.
+	- `C.getUserTemp()==false`
+- Définir la température de l'utilisateur en Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Définir la température de l'utilisateur en Celcius
+	- `C.setUserTemp(false);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à faux.
+	- `C.getUserTemp()==false`
+- Définir la température de l'utilisateur en Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Définir la température de l'utilisateur enen Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Définir la température de l'utilisateur en Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+	- Définir la température de l'utilisateur en Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Le programme affiche la page d'acceuil.
 
 Test  | Valeur Attendu | Valeur Observé | Validation  
 ------|----------------|----------------|-----------
 Celsius |    False |  |  
 Celsius |    False |  |  
-Fahrenheit |  True|    |  
+Fahrenheit |  True|    | 
 Celsius |    False |  |  
-
-T1.2:  
-- créer un objet de la classe Configuration (... paramètres), 
-- choisir Fahrenheit comme valeur de l’attribut userTemp (boolean a ? ), 
-- puis comparer le type de la valeur de l’attribut au booléen true.
+Fahrenheit |  True|    | 
+Fahrenheit |  True|    |  
+Fahrenheit |  True|    | 
+Fahrenheit |  True|    | 
 
 #### Scénario nominal de Configuration:
+T1.2:  
+- Initialiser la classe configuration
+- Définir la température de l'utilisateur en Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Définir la température de l'utilisateur en Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Définir la température de l'utilisateur en Celcius
+	- `C.setUserTemp(faux);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à faux.
+	- `C.getUserTemp()==faux`
+- Définir la température de l'utilisateur en Celcius
+	- `C.setUserTemp(false);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à faux.
+	- `C.getUserTemp()==false`
+- Définir la température de l'utilisateur en Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Définir la température de l'utilisateur enen Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Définir la température de l'utilisateur en Celcius
+	- `C.setUserTemp(false);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à faux.
+	- `C.getUserTemp()==True`
+	- Définir la température de l'utilisateur en Fahrenheit
+	- `C.setUserTemp(True);`
+- Réccupérer la température utilisateur
+	- Elle doit être égale à True.
+	- `C.getUserTemp()==True`
+- Le programme affiche la page d'acceuil.
 
-```
-C=newConfiguration();
-C.Set(userTemperature=true);
-AssertTrue(C.getuserTemperature==True);
-``` 
+Test  | Valeur Attendu | Valeur Observé | Validation  
+------|----------------|----------------|-----------
+Fahrenheit |  True|    | 
+Fahrenheit |  True|    | 
+Celsius |    False |  |  
+Celsius |    False |  |  
+Fahrenheit |  True|    | 
+Fahrenheit |  True|    | 
+Celsius |    False |  |  
+Fahrenheit |  True|    | 
+
+
+#### Scénario nominal de Configuration:
 
 
 Test  | Valeur Attendu | Valeur Observé | Validation  
@@ -172,17 +250,9 @@ Auteur : Zakaria BELGHAZAL
 Relecteur : Guillaume LAMANDA
 
 #### Spécification technique
-Sérialisation de l'état de l'objet :  
 On modifie la classe APISuivi pour qu'elle implémente la classe Serializable. Par héritage, la classe obtiendra un attribut privé serialVersionUID.  
 On modifie le programme principale pour qu'au démarrage, il restaure l'objet APISuivi depuis le ficher "APISuivi.ser". Si le fichier n'existe pas, on creer une nouvelle instance de la classe APISuivi.  
 A la fermeture du programme, le l'objet est écrit dans le fichier "APISuivi.ser".  
-
-Sérialisation des données :  
-Les données sont écrites dans un fichier `data.csv`.  
-On ajoute un attribut `lastFlush` de type Date à la classe APISuivi. Il correspond à la dernière écriture dans le fichier.  
-Une méthode writeData est ajouté à la classe APISuivi. Elle permet d'écrire les données qui n'ont pas encore été écrites dans le fichier. Elle vérifie pour chaque donnée à écrire si elle est bien différente de `null`.  
-A chaque <b>ajout</b> de nouvelle mesure, on vérifie si le temps depuis la dernière écriture est supérieur à 1h. Si c'est le cas, on appelle la méthode `writeData`.  
-
 
 Auteur : Guillaume LAMANDA	 
 Relecteur : Quentin LECHAT
