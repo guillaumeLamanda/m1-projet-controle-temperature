@@ -235,6 +235,24 @@ A la fermeture du programme, le l'objet est écrit dans le fichier "APISuivi.ser
 Autheur : Guillaume LAMANDA	 
 Relecteur : Quentin LECHAT
 
+
+#### Plan de test
+Test N°1 : 
+
+Intention de test : Ce test va permettre la vérification de la serialisarion du fichier APISuivi.ser 
+
+Procédure :
+T1.1: 
+- démarrer le programme sans que le fichier APISuivi.ser existe
+- fermer le programme
+- redémarrer le programme
+
+####Scenario nominal de Serializable
+
+
+Auteur : Quentin LECHAT
+Relecteur : 
+
 ### E 3.3 : On doit pouvoir faire un suivi à la minute
 
 #### Spécification fonctionnelle
@@ -249,7 +267,7 @@ Autheur : Guillaume LAMANDA
 Relecteur : Quentin LECHAT
 
 #### Spécification technique
-On modifie la classe APISuivi pour qu'elle implémente la classe Serializable. Par héritage, la classe obtiendra un attribut privé serialVersionUID.
+
 
 On ajoute une classe SuiviMinutes :
 - un attribut "temperatureMesuree" de type double qui stock la valeur de température de la minute
@@ -270,6 +288,9 @@ On modifie la classe SuiviHoraire pour prendre en compte les minutes :
 
 Autheur : Quentin LECHAT 
 Relecteur : 
+
+#### Plan de test : 
+
 
 ### E 3.4 : On doit pouvoir faire migrer des données enregistrées par heure, dans des données à la minute
 
