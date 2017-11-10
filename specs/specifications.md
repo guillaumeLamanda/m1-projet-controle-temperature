@@ -16,10 +16,11 @@ Relecteur : Guillaume Lamanda
 #### Spécification technique :
 
 On ajoute la classe Configuration :
-- Un attribut « userTemp » correspondant à l’unité de température en booléen. Le faux correspond au Celcius et le vrai correspond Fahrenheit (+ getter/setter),
+- Un attribut « userTemp » correspondant à l’unité de température en booléen. Le faux correspond au Celcius et le vrai correspond Fahrenheit (+ getter/setter),  
+
 Classe APISuivi : 
 - Une méthode « LireTemperature », qui permet de récupérer la température en via la méthode existante « lireTempérature » de la classe SuiviChauffage puis la convertie via la méthode « conversion »,
-- Une méthode AjoutNouvelleMesure qui reprend les paramètre de la classe SuiviTemperature.
+- Une méthode AjoutNouvelleMesure qui reprend les paramètres de la classe SuiviChauffage.
 - Une méthode « conversion » qui permet de convertir la valeur depuis le Kelvin à l’unité de destination choisi par l’utilisateur.  
 
 Autheur : Guillaume Lamanda    
@@ -160,12 +161,29 @@ Relecteur : Guillaume LAMANDA
 
 ### E 3.2 : les donnees de suivi doivent etre serialisees
 
-#### Spécification fonctionnelle
+#### Spécification fonctionnelle  
+La sérialisation ici a deux aspects : 
+- Sérialisation de l'état de l'objet
+- Sérialisation des données
+
+Sérialisation de l'état de l'objet :  
 A l’arrêt de système, les états des données seront sauvegardés.  
-Au démarrage de système on restaure l’état des données.
+Au démarrage de système on restaure l’état des données.  
+
+Sérialisation des données :  
+Les valeurs sont sérialisés dans un fichier au format CSV.  
+- Entête : 
+	- `annee ; mois ; jour ; heure ; minute ; temperature`
+Les données sont mises à jour toutes les heures dans le fichier.  
+Les données sont écrites dans l'ordre chronologique.  
+Une méthode d'export sera disponible en cas de besoin de l'utilisateur.  
+Les données seront présumés propre : Il n'es pas possible d'avoir deux valeurs pour une même heure. Il n'y a donc pas de doublons ou d'erreurs.  
+Si aucunes température n'est disponible pour une certaine heure, les données ne sont pas écrite dans le fichier.
 
 Auteur : Zakaria BELGHAZAL  
 Relecteur : Guillaume LAMANDA
+Auteur 2 : Guillaume LAMANDA
+Relecteur 2 : Serge MEL
 
 #### Spécification technique
 On modifie la classe APISuivi pour qu'elle implémente la classe Serializable. Par héritage, la classe obtiendra un attribut privé serialVersionUID.  
