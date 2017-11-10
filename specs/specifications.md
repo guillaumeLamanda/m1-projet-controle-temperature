@@ -10,7 +10,7 @@ L'unité d'affichage est choisie à l'installation, c'est degré Celsius (°C) F
 On peut modifier l'unité d'affichage de Celsius <-> Fahrenheit.  
 A l'installation, le système demande à choisir le pays d'installation dans une liste déroulante des pays. Tous les pays sont en degré Celsius (°C) sauf aux Etats-Unis, au Bélize et aux Îles caïman  Fahrenheit (°F).  
 
-Auteur : Quentin lechat  
+Auteur : Quentin Lechat  
 Relecteur : Guillaume Lamanda
 
 #### Spécification technique :
@@ -233,7 +233,7 @@ On modifie le programme principale pour qu'au démarrage, il restaure l'objet AP
 A la fermeture du programme, le l'objet est écrit dans le fichier "APISuivi.ser".  
 
 Autheur : Guillaume LAMANDA	 
-Relecteur : Quentin LE CHAT
+Relecteur : Quentin LECHAT
 
 ### E 3.3 : On doit pouvoir faire un suivi à la minute
 
@@ -246,18 +246,40 @@ Une minute stocke une seule valeur.
 Il n'es pas possible de modifier une valeur précédemment ajouté.
 
 Autheur : Guillaume LAMANDA  
-Relecteur : Quentin LE CHAT
+Relecteur : Quentin LECHAT
+
+#### Spécification technique
+On modifie la classe APISuivi pour qu'elle implémente la classe Serializable. Par héritage, la classe obtiendra un attribut privé serialVersionUID.
+On ajoute une classe SuiviMinutes :
+- un attribut "temperatureMesuree" de type double qui stock la valeur de température de la minute
+- une méthode AjoutNouvelleMesure qui prend en paramètre un double et qui va enregistrer la température
+- une méthode LireTemperature qui renvoit la température enregistrée de type Double
+
+On ajoute le paramètre entier "minute" pour les méthodes AjoutNouvelleMesure et LireTemperature des classes suivantes :
+- SuiviJournalier
+- SuiviMensuel 
+- SuiviAnnuel
+- SuiviChauffage
+- APISuivi
+
+Autheur : Quentin LECHAT 
+Relecteur : 
 
 ### E 3.4 : On doit pouvoir faire migrer des données enregistrées par heure, dans des données à la minute
 
 #### Spécification fonctionnelle
 
+- Les heurees et les minutes stockent une température en Kelvin
+- On peut dupliquer la valeur de température d'une heure dans 60 minutes
+
+Autheur : Quentin LECHAT 
+Relecteur : Serge MEL
+
 #### Spécification technique
 - On crée une classe MigrationDonnees avec une méthode migrationDonnees et prend en paramètre un double « heureMigration ».la classe possède un attribut « heure ».
 
-Autheur   :Serge MEL
-
-Relecteur :Quentin LE CHAT
+Autheur   : Serge MEL
+Relecteur : Quentin LECHAT
 
 ### E 3.5 : On veut récuperer les températures moyennes par heure, par jour et par mois.
 
