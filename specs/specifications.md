@@ -157,77 +157,21 @@ public class Configuration {
 Autheur : Zakaria BELGHAZAL  
 Relecteur : Guillaume LAMANDA
 
-
-***************************************************************************************************************** 
-
-On fait quoi de ca : 
-
-#### Plan de test : 
-
-Test N°1 : 
-
-ce test a pour but de laisser le choix à l’utilisateur de choisir dans la phase l’installation de choisir l’unité de température qui sera soit en Celsius ou Fahrenheit. Pour connaitre les états de la classe Configuration, une condition doit permettre de vérifier la valeur de l’attribut « userTemp».
-
-Si cette valeur de l’attribut correspond au degré Celsius,
-  Alors    résultat vaut « false»,
-Sinon Si cette valeur de l’attribut correspond au Fahrenheit
-  Alors   résultat vaut « vrai». 
-  
-T1:
-``` 
-C=newConfiguration() ;
-C.Set(userTemperature=Celsius);
-AssertTrue(C.getuserTemperature==false);
-``` 
-
-T2:
-``` 
-C=newConfiguration() ;
-C.Set(userTemperature=Fahrenheit);
-AssertTrue(C.getuserTemperature==true);
-```
-
-Test N°2 :
-
-Le test consiste à récupérer la température via la classe APISuivi par appel de la méthode LireTemperature qui appelle la méthode LireTemperature de la classe SuiviChauffage. 
-
-De même l’ajout de nouvelle mesure sur la classe APISuivi est faite par la méthode AjoutNouvelleMesure via la méthode AjoutNouvelleMesure de la classe SuiviChauffage.
-
-T2-1 :
-```
-ApiSuivi=new APISuivi() ; 
-ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; 
-AssertTrue(ApiSuivi.LireTempérature(temperatureFahrenheit)) ;
-```
-
-T2-2 :
-```
-ApiSuivi=new APISuivi() ; 
-ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; 
-AssertTrue(ApiSuivi.LireTempérature(temperatureCelsius)) ;
-```
-
-T2-3 :
-```
-ApiSuivi=new APISuivi() ; 
-ApiSuivi. AjoutNouvelleMesure (NouvelleMesure) ; ApiSuivi.LireTempérature(temperatureKelvin) ; ApiSuivi.Conversion() ; 
-AssertTrue(ApiSuivi.LireTempérature(temperatureCelsius)) ;
-```
-Auteur : Serge MEL
-Relecteur : Guillaume LAMANDA
-
 ### E 3.2 : les donnees de suivi doivent etre serialisees
 
 #### Spécification fonctionnelle
 A l’arrêt de système, les états des données seront sauvegardés.  
 Au démarrage de système on restaure l’état des données.
 
+Auteur : Zakaria BELGHAZAL  
+Relecteur : Guillaume LAMANDA
+
 #### Spécification technique
 On modifie la classe APISuivi pour qu'elle implémente la classe Serializable. Par héritage, la classe obtiendra un attribut privé serialVersionUID.  
 On modifie le programme principale pour qu'au démarrage, il restaure l'objet APISuivi depuis le ficher "APISuivi.ser". Si le fichier n'existe pas, on creer une nouvelle instance de la classe APISuivi.  
 A la fermeture du programme, le l'objet est écrit dans le fichier "APISuivi.ser".  
 
-Autheur : Guillaume LAMANDA	 
+Auteur : Guillaume LAMANDA	 
 Relecteur : Quentin LECHAT
 
 
@@ -239,14 +183,43 @@ Intention de test : Ce test va permettre la vérification de la serialisarion du
 Procédure :
 T1.1: 
 - démarrer le programme sans que le fichier APISuivi.ser existe
+- Ajouter de nouvelles mesures
+	- AjoutNouvelleMesure( 2017, 03, 1, 12, 12 );
+	- AjoutNouvelleMesure( 2017, 03, 1, 13, 12 );
+	- AjoutNouvelleMesure( 2017, 03, 2, 12, 12 );
+	- AjoutNouvelleMesure( 2017, 03, 2, 13, 12 );
 - fermer le programme
 - redémarrer le programme
+- Accèder aux mesures 
+	- LireTemperature( 2017, 03, 1, 12); 
+		-	doit retourner 12.
+	- LireTemperature( 2017, 03, 1, 13);
+		- doit retourner 12.
+- fermer le programme
+- supprimer 'APISuivi.ser' 
+- redémarrer le programme
+- Accèder aux mesures 
+	- LireTemperature( 2017, 03, 1, 12); 
+		-	doit retourner null.
+	- LireTemperature( 2017, 03, 1, 13);
+		- doit retourner null.
 
-####Scenario nominal de Serializable
+| Test | Valeur attendu | Valeur observé | Validation
+|------|---------------|-------------|----
+| AjoutNouvelleMesure( 2017, 03, 1, 12, 12 ) | true |  |
+| AjoutNouvelleMesure( 2017, 03, 1, 13, 12 ) | true |  |
+| AjoutNouvelleMesure( 2017, 03, 2, 12, 12 ) | true |  |
+| AjoutNouvelleMesure( 2017, 03, 2, 13, 12 ) | true |  |
+| Fermer le programme 	| Sérialisation : 'APISuivi.ser' |  |
+| LireTemperature( 2017, 03, 1, 12) | 12 |  |
+| LireTemperature( 2017, 03, 1, 13) | 12 |  |
+| Fermer le programme 	| Sérialisation : 'APISuivi.ser' |  |
+| supprimer le fichier  | -  | - | - |
+| LireTemperature( 2017, 03, 1, 12) | null |  |
+| LireTemperature( 2017, 03, 1, 13) | null |  |
 
-
-Auteur : Quentin LECHAT
-Relecteur : 
+Auteur : Quentin LECHAT  
+Relecteur : Guillaume LAMANDA
 
 ### E 3.3 : On doit pouvoir faire un suivi à la minute
 
