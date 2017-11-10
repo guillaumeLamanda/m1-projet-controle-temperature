@@ -31,9 +31,9 @@ Les données seront présumés propre : Il n'es pas possible d'avoir deux valeur
 Si aucunes température n'est disponible pour une certaine heure, les données ne sont pas écrite dans le fichier.
 
 Auteur : Zakaria BELGHAZAL  
-Relecteur : Guillaume LAMANDA
-Auteur 2 : Guillaume LAMANDA
-Relecteur 2 : Serge MEL
+Relecteur : Guillaume LAMANDA  
+Auteur 2 : Guillaume LAMANDA  
+Relecteur 2 : Serge MEL  
 
 #### E 3.3 : On doit pouvoir faire un suivi à la minute
 Une heure contient 60 minutes.  
@@ -43,15 +43,15 @@ On peut ajouter une nouvelle mesure pour une minute donnée.
 Une minute stocke une seule valeur.  
 Il n'es pas possible de modifier une valeur précédemment ajouté.
 
-Autheur : Guillaume LAMANDA  
-Relecteur : Quentin LECHAT
+Autheur : Guillaume LAMANDA   
+Relecteur : Quentin LECHAT  
 
 #### E 3.4 : On doit pouvoir faire migrer des données enregistrées par heure, dans des données à la minute
 - Les heurees et les minutes stockent une température en Kelvin
 - On peut dupliquer la valeur de température d'une heure dans 60 minutes
 
-Autheur : Quentin LECHAT 
-Relecteur : Serge MEL
+Autheur : Quentin LECHAT   
+Relecteur : Serge MEL  
 
 #### E 3.5 : On veut récuperer les températures moyennes par heure, par jour et par mois.
 - Spécification fonctionnelle températues moyennes par heure :
@@ -64,8 +64,8 @@ Relecteur : Serge MEL
 - Spécification fonctionnelle températues moyennes par mois  :
   Extraire les différentes valeurs de températures mesusées de chaque jour sur une période 30 jours et faire la moyenne.
   
-Autheur : Serge MEL  
-Relecteur : Guillaume LAMANDA
+Autheur : Serge MEL   
+Relecteur : Guillaume LAMANDA  
 
 
 
@@ -79,7 +79,7 @@ Classe APISuivi :
 - Une méthode « conversion » qui permet de convertir la valeur depuis le Kelvin à l’unité de destination choisi par l’utilisateur.  
 
 Autheur : Guillaume Lamanda    
-Relecteur : Serge Mel
+Relecteur : Serge Mel  
 
 #### E 3.2 : les donnees de suivi doivent etre serialisees
 Sérialisation de l'état de l'objet :  
@@ -95,7 +95,7 @@ A chaque <b>ajout</b> de nouvelle mesure, on vérifie si le temps depuis la dern
 
 
 Auteur : Guillaume LAMANDA	 
-Relecteur : Quentin LECHAT
+Relecteur : Quentin LECHAT  
 
 #### E 3.3 : On doit pouvoir faire un suivi à la minute
 On ajoute une classe SuiviMinutes :
@@ -122,8 +122,8 @@ Relecteur : Guillaume LAMANDA
 On ajoute une classe MigrationDonnees :
 - migrationDonnees qui prend en paramètre un double et qui va enregistrer la température
 
-Autheur   : Serge MEL
-Relecteur : Quentin LECHAT
+Autheur   : Serge MEL  
+Relecteur : Quentin LECHAT  
 
 #### E 3.5 : On veut récuperer les températures moyennes par heure, par jour et par mois.
 Non fait
