@@ -254,11 +254,54 @@ On modifie la classe SuiviHoraire pour prendre en compte les minutes :
 - ajout d'un paramètre liste "lesMinutes"
 - modification du constructeur qui créé 60 objets SuviMinutes et les ajoute dans la liste
 
-Autheur : Quentin LECHAT 
-Relecteur : 
+Autheur : Quentin LECHAT   
+Relecteur : Guillaume LAMANDA
 
 #### Plan de test : 
 
+##### Test n°1
+Intention de test : Vérifier qu'il est bien possible d'ajouter une nouvelle mesure dans une minute, et de la lire.
+
+Procédure : 
+- [ Init ]
+- AjoutNouvelleMesure( 2017, 03, 1, 12, 59, 12 );
+	- Doit retourner `true`
+- AjoutNouvelleMesure( 2017, 03, 1, 13, 00, 13 );
+	- Doit retourner `true`
+- AjoutNouvelleMesure( 2017, 03, 2, 12, 15, 14 );
+	- Doit retourner `true`
+- AjoutNouvelleMesure( 2017, 03, 2, 13, 30, 15 );
+	- Doit retourner `true`
+- LireTemperature( 2017, 03, 1, 12, 59);
+	- Doit retourner 12
+- LireTemperature( 2017, 03, 1, 13, 00);
+	- Doit retourner 13
+- LireTemperature( 2017, 03, 1, 12, 15);
+	- Doit retourner 14
+- LireTemperature( 2017, 03, 1, 13, 30);
+	- Doit retourner 15
+- LireTemperature( 2017, 03, 6, 13, 30);
+	- Valeur non ajoutée
+	- Doit retourner null
+- LireTemperature( 2017, 03, 6, 13, 62);
+	- Valeur impossible
+	- Doit retourner null
+
+| Test | Valeur attendu | Valeur observé | Validation
+|------|---------------|-------------|----
+| AjoutNouvelleMesure( 2017, 03, 1, 12, 59, 12 ) | true |  |
+| AjoutNouvelleMesure( 2017, 03, 1, 13, 00, 13 ) | true |  |
+| AjoutNouvelleMesure( 2017, 03, 2, 12, 15, 14 ) | true |  |
+| AjoutNouvelleMesure( 2017, 03, 2, 13, 30, 15 ) | true |  |
+| LireTemperature( 2017, 03, 1, 12, 59) | 12 |  |
+| LireTemperature( 2017, 03, 1, 13, 00) | 13 |  |
+| LireTemperature( 2017, 03, 2, 12, 15) | 14 |  |
+| LireTemperature( 2017, 03, 2, 13, 30) | 14 |  |
+| LireTemperature( 2017, 03, 6, 13, 30 | null |  |
+| LireTemperature( 2017, 03, 6, 13, 62) | null |  |
+
+Auteur : Guillaume LAMANDA  
+Relecteur : Quentin LECHAT
 
 ### E 3.4 : On doit pouvoir faire migrer des données enregistrées par heure, dans des données à la minute
 
@@ -291,8 +334,7 @@ Relecteur : Quentin LECHAT
 - Spécification fonctionnelle températues moyennes par mois  :
   Extraire les différentes valeurs de températures mesusées de chaque jour sur une période 30 jours et faire la moyenne.
   
-Autheur   :Serge MEL
-
-Relecteur :Guillaume LAMANDA
+Autheur : Serge MEL  
+Relecteur : Guillaume LAMANDA
 
 #### Spécification technique
