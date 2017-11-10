@@ -26,6 +26,7 @@ Autheur : Guillaume Lamanda
 Relecteur : Serge Mel
 
 #### Plan de test :
+<span style="color: red">A REVOIR/COMPLETER PAR SERGE</span>
 Test N°1 : 
 
 Intention de test : Ce test va permettre la bonne configuration de l'unité de température après la configuration du boitier. Pour cela on vérifie l'attribut booleen "userTemp". 
@@ -314,10 +315,13 @@ Autheur : Quentin LECHAT
 Relecteur : Serge MEL
 
 #### Spécification technique
+<span style="color: red">A REFAIRE PAR SERGE</span>
 - On crée une classe MigrationDonnees avec une méthode migrationDonnees et prend en paramètre un double « heureMigration ».la classe possède un attribut « heure ».
 
 Autheur   : Serge MEL
 Relecteur : Quentin LECHAT
+
+#### Plan de Test
 
 ### E 3.5 : On veut récuperer les températures moyennes par heure, par jour et par mois.
 
@@ -338,3 +342,6 @@ Autheur : Serge MEL
 Relecteur : Guillaume LAMANDA
 
 #### Spécification technique
+<span style="color: red">FAIT PAR ZAK ?</span>
+
+#### Plan de test
